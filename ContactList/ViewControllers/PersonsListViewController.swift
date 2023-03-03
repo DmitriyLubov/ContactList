@@ -7,9 +7,16 @@
 
 import UIKit
 
-class PersonsListViewController: UITableViewController {
+final class PersonsListViewController: UITableViewController {
     private let personsList = Person.getPersonsList()
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let personVC = segue.destination as? PersonDetailsViewController
+        
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        
+        personVC?.person = personsList[indexPath.row]
+    }
 }
 
 // MARK: UITableViewDataSource
