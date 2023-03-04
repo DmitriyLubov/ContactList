@@ -9,8 +9,8 @@ struct Person {
     let name: String
     let surname: String
     
-    let phone: String
-    let email: String
+    let phone: [String]
+    let email: [String]
     
     var fullName: String {
         "\(name) \(surname)"
@@ -37,8 +37,8 @@ struct Person {
             personsList.append(Person(
                 name: name,
                 surname: surname, 
-                phone: phone,
-                email: email
+                phone: [phone],
+                email: [email]
             ))
         }
         

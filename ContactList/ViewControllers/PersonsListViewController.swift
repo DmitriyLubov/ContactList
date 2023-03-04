@@ -8,7 +8,7 @@
 import UIKit
 
 final class PersonsListViewController: UITableViewController {
-    private let personsList = Person.getPersonsList()
+    let personsList = Person.getPersonsList()
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let personVC = segue.destination as? PersonDetailsViewController

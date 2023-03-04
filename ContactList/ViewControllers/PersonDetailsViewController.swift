@@ -22,7 +22,7 @@ final class PersonDetailsViewController: UIViewController {
     private func setupView() {
         title = person.fullName
         
-        phoneNumberLabel.text = person.phone
-        emailAddressLabel.text = person.email
+        phoneNumberLabel.text = person.phone.first
+        emailAddressLabel.text = person.email.first
     }
 }
