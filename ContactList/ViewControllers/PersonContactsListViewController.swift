@@ -9,7 +9,7 @@ import UIKit
 
 final class PersonContactsListViewController: UITableViewController {
     
-    var personsList: [Person]!
+    private var personsList: [Person] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
