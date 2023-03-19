@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B6884C7129B216F600BFD3CB /* PersonDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6884C7029B216F600BFD3CB /* PersonDetailsViewController.swift */; };
+		B68DBEDD29C715C400AE657D /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68DBEDC29C715C400AE657D /* TabBarViewController.swift */; };
 		B6DA232829B2E9A5000F39CE /* PersonContactsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DA232729B2E9A5000F39CE /* PersonContactsListViewController.swift */; };
 		B6E23E4329B0B9710012E5A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E23E4229B0B9710012E5A6 /* AppDelegate.swift */; };
 		B6E23E4529B0B9710012E5A6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E23E4429B0B9710012E5A6 /* SceneDelegate.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		B6884C7029B216F600BFD3CB /* PersonDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailsViewController.swift; sourceTree = "<group>"; };
+		B68DBEDC29C715C400AE657D /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		B6DA232729B2E9A5000F39CE /* PersonContactsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonContactsListViewController.swift; sourceTree = "<group>"; };
 		B6E23E3F29B0B9710012E5A6 /* ContactList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6E23E4229B0B9710012E5A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 		B6E23E5829B0BA970012E5A6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				B68DBEDC29C715C400AE657D /* TabBarViewController.swift */,
 				B6E23E4629B0B9710012E5A6 /* PersonsListViewController.swift */,
 				B6884C7029B216F600BFD3CB /* PersonDetailsViewController.swift */,
 				B6DA232729B2E9A5000F39CE /* PersonContactsListViewController.swift */,
@@ -190,6 +193,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B68DBEDD29C715C400AE657D /* TabBarViewController.swift in Sources */,
 				B6DA232829B2E9A5000F39CE /* PersonContactsListViewController.swift in Sources */,
 				B6E23E6229B0CF8E0012E5A6 /* Person.swift in Sources */,
 				B6E23E4729B0B9710012E5A6 /* PersonsListViewController.swift in Sources */,

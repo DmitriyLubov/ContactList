@@ -15,7 +15,9 @@ struct Person {
     var fullName: String {
         "\(name) \(surname)"
     }
-    
+}
+
+extension Person {
     static func getPersonsList() -> [Person] {
         var personList: [Person] = []
         

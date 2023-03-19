@@ -8,11 +8,12 @@
 import UIKit
 
 final class PersonDetailsViewController: UIViewController {
-    var person: Person!
     
     @IBOutlet var phoneNumberLabel: UILabel!
     @IBOutlet var emailAddressLabel: UILabel!
     
+    var person: Person!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         

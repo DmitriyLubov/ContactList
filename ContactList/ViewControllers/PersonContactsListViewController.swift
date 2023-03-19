@@ -9,7 +9,7 @@ import UIKit
 
 final class PersonContactsListViewController: UITableViewController {
     
-    private var personsList: [Person] = []
+    var personList: [Person] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,15 +21,15 @@ final class PersonContactsListViewController: UITableViewController {
 // MARK: UITableViewDataSource
 extension PersonContactsListViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
-        personsList.count
+        personList.count
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        personsList[section].fullName
+        personList[section].fullName
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let person = personsList[section]
+        let person = personList[section]
         
         return (person.phone + person.email).count
     }
@@ -38,7 +38,7 @@ extension PersonContactsListViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "personContact", for: indexPath)
         var content = cell.defaultContentConfiguration()
         
-        let person = personsList[indexPath.section]
+        let person = personList[indexPath.section]
         let text = (person.phone + person.email)[indexPath.row]
         content.text = text
         
@@ -64,7 +64,7 @@ private extension PersonContactsListViewController {
                 let personsVC = navigationVC.topViewController as? PersonsListViewController
                 guard let personsVC else { return }
                 
-                personsList = personsVC.personsList
+                personList = personsVC.personList
             }
         }
     }
