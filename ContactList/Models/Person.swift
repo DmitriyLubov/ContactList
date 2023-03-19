@@ -17,32 +17,27 @@ struct Person {
     }
     
     static func getPersonsList() -> [Person] {
-        let personData = DataStore()
+        var personList: [Person] = []
         
-        let fullNames = zip(
-            personData.names.shuffled(),
-            personData.surnames.shuffled()
-        )
-        let contactData = zip(
-            personData.phones.shuffled(),
-            personData.emailAddresses.shuffled()
-        )
+        let names = DataStore.shared.names.shuffled()
+        let surnames = DataStore.shared.surnames.shuffled()
+        let phones = DataStore.shared.phones.shuffled()
+        let emails = DataStore.shared.emails.shuffled()
         
-        var personsList: [Person] = []
+        let count = min(names.count, surnames.count, phones.count, emails.count)
         
-        for (fullName, contact) in zip(fullNames, contactData) {
-            let (name, surname) = fullName
-            let (phone, email) = contact
+        for index in 0..<count {
+            let person = Person(
+                name: names[index],
+                surname: surnames[index],
+                phone: [phones[index]],
+                email: [emails[index]]
+            )
             
-            personsList.append(Person(
-                name: name,
-                surname: surname, 
-                phone: [phone],
-                email: [email]
-            ))
+            personList.append(person)
         }
         
-        return personsList
+        return personList
     }
 }
 
